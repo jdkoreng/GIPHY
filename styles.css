@@ -1,0 +1,52 @@
+.imgInput {
+
+}
+
+
+.buttonHouse {
+
+
+
+}
+
+
+
+.submitButton {
+
+
+
+}
+
+
+.results {
+
+
+
+}
+
+
+body {
+
+    background-color: black;
+}
+
+h1 {
+    color: yellow;
+}
+
+#addAthing {
+    color: yellow;
+    
+}
+
+#MyImageInput {
+    border: 4px solid white;
+    background-color: black;
+
+}
+
+#MyImageSubmit {
+
+    border: 4px solid white;
+    background-color: black;
+}
