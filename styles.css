@@ -45,14 +45,16 @@ h1 {
 
 #MyImageInput {
     border: 4px solid white;
-    background-color: black;
+    /* background-color: black; */
+    background: url("space.png")
 
 }
 
 #MyImageSubmit {
 
     border: 4px solid white;
-    background-color: black;
+    /* background-color: black; */
+    background: url("space.png") 
 }
 
 #wholeThing {
