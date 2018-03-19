@@ -28,8 +28,9 @@
 
 
 body {
+    background-image: url("space.png");
 
-    background-color: black;
+    /* background-color: black; */
 }
 
 h1 {
