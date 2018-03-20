@@ -1,7 +1,7 @@
 var itemsToSearch = ["Luke Skywalker", "Han Solo", "Jabba the Hutt", "Greedo", "Boba Fett"]
 var whatYouWant = ""
 var personImage = ""
-
+var results = ""
 var person = ""
 
 var loadButtons = function() {
@@ -88,40 +88,17 @@ $(document).on("click", ".optionsOf", function() {
 
 $(document).on("click", ".personImage", function() {
 
-    var a = $(this)
-
     console.log("clicked a photo")
 
-    person = $(this).attr("person");
-
-    console.log(person)
-
-
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        person + "&api_key=dc6zaTOxFJmzC&limit=10";
-
-        var moving = $(this).attr("moves")
-
-
-
-    $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-        .then(function(response) {
-            var results = response.data;
-
-
-
-
+    var moving = $(this).attr("moves");
 
     if (moving == "false") {
 
         console.log("img is not moving currently, starting")
 
-        a.attr("src", results[a.attr("imageNumber")].images.fixed_height.url);
+        $(this).attr("src", results[($(this).attr("imageNumber"))].images.fixed_height.url);
 
-        a.attr("moves", 'true');
+        $(this).attr("moves", 'true');
 
 
 
@@ -130,13 +107,12 @@ $(document).on("click", ".personImage", function() {
 
         console.log("img is moving currently, stopping")
 
-        a.attr("src", results[a.attr("imageNumber")].images.fixed_height_still.url);
+        $(this).attr("src", results[($(this).attr("imageNumber"))].images.fixed_height_still.url);
         console.log("stopped the image")
 
-        a.attr("moves", 'false')
+        $(this).attr("moves", 'false')
 
 
 
     }
-})
 })
